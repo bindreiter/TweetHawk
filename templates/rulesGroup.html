@@ -1,0 +1,101 @@
+{% include 'header.html' %}
+
+<link rel="stylesheet" href="/static/css/group.css">
+<div class="supremeContainer">
+    
+    <div class="groupMainContainer">
+        
+        <div class="groupTitleContainer"><a href="/monitor/groups/" class="goBackArrow">&#129044;</a> <div class="groupTitle"> <p class="groupTitle">{{groupName}}</p></div></div>
+        
+        <div class="runSettingsContainer">
+            <form  action="/monitor/groups/{{groupID}}/run" method="POST">    
+                <div class="runSettingsContainerForm">
+                    <button class="runButton"><img src="/static/images/pause.png" class="runButtonImage"></button>
+                    <input  type="checkbox" id="enableAutoRun" {{autorunEnabled}} name="autorun" onclick="const Http = new XMLHttpRequest();Http.open('POST', '../auto');Http.send();" > <p class="enableAutoRun" >Enable Autorun</p>
+                </div>
+            </form>
+        </div>
+
+        <div class="lastScanContainer">
+            Last time scanned: {{lastTimeScanned}}
+        </div>
+
+        <div class="settingsContainer">
+            <a  class="groupSettingsContainer" href="/monitor/groups/{{ groupID}}/" ><p class="settingTitle">Results</p></a>
+            <a  class="groupSettingsContainer" href="/monitor/groups/{{ groupID}}/users" ><p class="settingTitle">Users</p></a>
+            <a class="groupSettingsContainer" href="/monitor/groups/{{ groupID}}/rules" ><p class="settingTitle">Rules</p></a>
+            <a class="groupSettingsContainer" href="/monitor/groups/{{ groupID}}/settings"><p class="settingTitle">Settings</p></a>
+            
+        </div>
+        <div class="descriptionContainer">
+            <p> {{ groupDescription }} </p>
+        </div>
+
+       
+
+        <div class="userListContainer">
+            <div class="resultTitle">Rules</div>
+            <div class="gridForUsers">
+                
+                {% for rule  in rulesList%}
+                <div class="userContainer">
+                    <div class="userDataContainer">
+                        <p class="nicknameTitle">{{  ruleType[rule[0]] }}</p>
+                        <p class="ruleTitle">{{ rule[1] }}</p>
+                    </div>
+                </div>
+                {%endfor%}
+               
+                <a class="userContainer" id="myBtn" style="text-decoration: none; color:inherit;"  >
+                    <img class="addUserImage" src="/static/images/add.png"> </img>
+                </a>
+                
+            </div>
+    
+        </div>
+
+    </div> 
+</div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <form method="POST" action="/monitor/groups/{{groupID}}/rules/add">
+          <p class="standartTitle">New Rule</p>
+          <select id='ruleSelect' name="ruleSelect" class="dropdownList">
+            <option  value="image">Scan Images</option>
+            <option  value="text" >Search Text</option>
+            <option  value="regex" >Search Regex</option>
+          </select>
+
+          <div class="scanTypeContainer" id='scanTypeContainer'>
+            <input type="radio" name="scanType" value="Guns" id='scanTypeContainer'>Guns<br>
+            <input type="radio" name="scanType" value="Gore" id='scanTypeContainer'>Gore/Extreme Violence<br>
+            <input type="radio" name="scanType" value="Porn" id='scanTypeContainer'>Porn<br>
+            <input type="radio" name="scanType" value="Drugs" id='scanTypeContainer'>Drugs<br>   
+            <input type="radio" name="scanType" value="Nudity" id='scanTypeContainer'>Suggestive Nudity<br>
+            <input type="radio" name="scanType" value="Money" id='scanTypeContainer'>Money<br>
+            <input type="radio" name="scanType" value="Hate" id='scanTypeContainer'>Hate Signs<br>
+          </div>
+
+          <div class="searchStringRuleContainer" id="searchStringRuleContainer">
+                <input type="text" class="inputField" id="searchString" name="searchString" placeholder="Key string to search...">
+          </div>
+          <div class="buttonContainer">
+            <button class="standardButton" type="submit" value="Submit">Add Rule</button>
+          </div>
+          
+      </form>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+    
+    <script src="/static/js/rules.js"></script>
+    
+
+
+
+
+  </div>

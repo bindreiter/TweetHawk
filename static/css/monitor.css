@@ -1,0 +1,307 @@
+a {
+	text-decoration: none !important;
+	color: black !important;;
+}
+a:focus, a:hover {
+    color: #000000 !important;;
+    text-decoration: none !important;
+}
+a:link {
+	color: black !important;
+	text-decoration: none !important;
+}
+
+.mainContainer{
+	
+	position: absolute;
+	width: 100%;
+	padding-bottom: 1%;
+	padding-top: 1%;
+	padding-left: 2%;
+	padding-right: 2%;
+	align-items: center;
+	justify-content: center;
+
+}
+
+
+.monitorMode{
+	
+    width: 100%;
+    font-size: 17px;
+    font-weight:750;
+	margin-left: 15px;
+}
+.monitormodecontainer{
+	position:relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
+	align-items:  center;
+}
+
+.separator{
+	position: relative;
+	align-self: center;
+	margin-left: auto;
+	margin-right: auto;
+    width: 70%;
+	margin-bottom: 10px;
+	border-width: 0px;
+    border-bottom-width: 1px;
+    border-style: solid;
+	
+    border-color: #000;
+}
+
+.groupPanel {
+  align-self: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(3, minmax(3rem, 1fr));
+  background-color: #ffffff;
+  grid-gap: 30px;
+
+}
+
+.statsValue{
+	padding-top: 10%;
+}
+.groupLayout {
+
+  background-color: #B2BEB5;
+  opacity: 0.6;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  text-align: center;
+  aspect-ratio: 1 / 1;
+  border-radius: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+
+}
+
+.groupLayout:hover {
+  background-color: #B2BEB5;
+  opacity: 0.6;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  text-align: center;
+  
+  aspect-ratio: 1 / 1;
+  border-radius: 3%;
+  transform: scale(1.05);
+
+  text-decoration: none;
+  color: inherit;
+
+}
+
+
+.groupTitle{
+	padding-top: 6%;
+	text-align: center;
+	font-size: 20px;
+	font-weight: 900;
+
+}
+
+
+.groupStats{
+	margin-right: 3%;
+	margin-left: 3%;
+	width: 100%;
+	border-width: 1px;
+	border-color: black;
+	border-style: solid;
+	border-radius: 5%;
+}
+
+.groupStatsContainer{
+	padding-left: 4%;
+	padding-right: 4%;
+	padding-bottom: 6%;
+	position:relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items:  flex-end;
+}
+
+.groupDescription{
+	padding-left: 6%;
+	padding-right: 6%;
+}
+
+
+p {
+	max-width: 100%;
+}
+
+*{
+font-family: Arial;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* The Modal (background) */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 100px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	padding-left: 35%;
+	padding-right: 35%;
+
+  }
+
+  .inputField{
+	margin-right: auto;
+	margin-left: auto;
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+  }
+
+  .dropdownList{
+    width: 100%;
+    height: 35px;
+    margin-bottom: 10px;
+
+    
+}
+
+.dropdownListOption{
+    width: 100%;
+    size:50px;
+}
+
+  .standardButton{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 35px;
+
+}
+
+.buttonContainer{
+    margin-top: 15px;
+    width: 100%;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+  .myModal{
+	padding-left:35%;
+	padding-right: 35%;
+  }
+  /* Modal Content */
+  .modal-content {
+	background-color: #fefefe;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+  }
+  
+  /* The Close Button */
+  .close {
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+  }
+
+
+
+
+
+
+
+
+  .switch {
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+  }
+  
+  .switch input {display:none;}
+  
+  .slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: .4s;
+	transition: .4s;
+  }
+  
+  .slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: .4s;
+	transition: .4s;
+  }
+  
+  input:checked + .slider {
+	background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+	box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+  }
+  

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>TweetH</title>
+  <link rel='stylesheet' href='/static/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Montserrat'><link rel="stylesheet" href="/static/css/header.css">
+
+</head>
+<link rel="stylesheet" href="/static/css/monitor.css">
+
+
+
+
+<groups>
+	
+	<div class="mainContainer">
+
+		<div class="separator">
+			<div class="monitormodecontainer">
+				<label class="switch">
+					<input type="checkbox" {{isAutorunEnabled}} >
+					<div class="slider"></div>
+				</label>
+				<p class="monitorMode">Monitor mode</p>
+			</div>
+		</div>
+		<div class="groupPanel">
+			{% for group in groupList%}
+			<a href ="/monitor/groups/{{group[0]}}" class="groupLayout" style="text-decoration: none; color:inherit;">
+				<div class="groupTitle">
+					<p>{{ group[1] }}</p>
+				</div>
+				<div class="groupDescription">
+					<p>{{ group[2] }}</p>
+				</div>
+				
+				<div class="groupStatsContainer">
+					<div class="groupStats"><p class="statsValue">{{ group[3] }}</p> <p>Users</p></div>     <div class="groupStats"><p class="statsValue">{{ group[4] }}</p><p>Rules</p></div> <div class="groupStats"><p class="statsValue">{{ group[5] }}</p><p>Results</p></div> 
+				</div>
+			</a>
+			{%endfor%}
+			
+			<a class="groupLayout" id="myBtn" style="text-decoration: none; color:inherit;"  >
+				<img src="/static/images/add.png"> </img>
+			</a>
+
+		</div>
+	</div>
+
+
+	<!-- The Modal -->
+<div id="myModal" class="modal">
+
+	<!-- Modal content -->
+	<div class="modal-content">
+	  <span class="close">&times;</span>
+	  <form method="POST" action="/monitor/groups/create">
+		  <p>New Group Name</p>
+		  <input type="text" id="groupName" class="inputField" name="groupName"><br>
+		  <p>Group Description</p>
+		  <input type="text" id="groupDescription" class="inputField" name="groupDescription"><br>
+		  <p>Analyze Interval</p>
+		  <!-- <input type="number" id="groupInterval" class="inputField" name="groupInterval"><br> -->
+  
+		  <select name="groupInterval" class="dropdownList" type="number">
+			  <option  value="1">1 minute</option>
+			  <option  value="5" >5 minutes</option>
+			  <option  value="15" >15 minutes</option>
+			  <option  value="30" >30 minutes</option>
+			  <option  value="60" >1 hour</option>
+			  <option  value="120" >2 hours</option>
+			  <option  value="720" >12 hours</option>
+			  <option  value="1440" >1 day</option>
+		  </select>
+		  
+		  <div class="buttonContainer">
+			  <button class="standardButton" type="submit" value="Submit">Create</button>
+		  </div>
+	  </form>
+	</div>
+	<script src="/static/js/groups.js"></script>
+  </div>
+</groups>
+
+
+
+
+
+

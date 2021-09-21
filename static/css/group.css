@@ -1,0 +1,487 @@
+.supremeContainer{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-left: auto;
+    padding-right: auto;
+
+}
+
+
+.groupMainContainer{
+    
+    position: relative;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    margin-top: 10px;
+}
+
+.lastScanContainer{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 20%;
+    opacity: 0.6;
+    margin-top: 140px;
+
+    
+
+}
+
+
+.settingsContainer{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    width: 20%;
+    background-color: #B2BEB5;
+    opacity: 0.6;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    margin-top: 175px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 15px;
+    border-radius: 5px;
+    
+
+}
+
+.inputField{
+	margin-right: auto;
+	margin-left: auto;
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+  }
+
+
+
+.descriptionContainer{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    width: 20%;
+    background-color: #B2BEB5;
+    opacity: 0.6;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    margin-top: 520px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 15px;
+    border-radius: 5px;
+    
+
+}
+
+.runSettingsContainer{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+
+    width: 20%;
+    opacity: 0.6;
+    margin-top: 58px;
+    border-radius: 5px;
+}
+
+.runSettingsContainerForm{
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+    align-items:center;
+}
+
+.runButtonImage{
+    width: 50px;
+    height: 50px;
+}
+
+.resultListContainer{
+    width: 70%;
+    margin-left: 30%;
+    padding-left: 40px;
+    background-color: white;
+
+}
+
+
+
+.enableAutoRun{
+
+    margin: 0px 0 0;
+    margin-left: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin:none;
+}
+
+#enableAutoRun{
+
+    margin: 0px 0 0;
+    margin-left: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 10px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin:none;
+}
+
+
+
+
+.resultTitle{
+    text-align: center;
+    font-weight: 600;
+    margin-top: 15px;
+    font-size: 16px;
+    margin-bottom: 20px;
+
+}
+
+.groupTitleContainer{
+    position: fixed;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    border-bottom-color: black;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+
+    font-weight:850;
+    margin-top: 15px;
+    font-size: 17px;
+    margin-bottom: 20px;
+   
+    width: 20%;
+
+    padding-right: 15px;
+    padding-left: 15px;
+   
+
+}
+
+.standardButton{
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 35px;
+
+}
+
+.buttonContainer{
+    margin-top: 15px;
+    width: 100%;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.groupTitle{
+   
+    text-align: center;
+    justify-content: center;
+    text-justify: center;
+    display: flex;
+    width: 100%;
+    align-self: center;
+    padding-top: 3px;
+   
+
+}
+
+.standartTitle{
+   
+    text-align: center;
+    justify-content: center;
+    text-justify: center;
+    width: 100%;
+    align-self: center;
+    font-size: 17px;
+    font-weight:750;
+    
+   
+
+}
+
+.groupSettingsContainer{
+    width: 100%;
+    height: 60px;
+    margin-bottom: 15px;
+    padding-top: 15px;
+    background-color: #B2BEB5;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+
+    border-radius: 5px;
+
+
+}
+
+.settingTitle{
+
+}
+
+.userListContainer{
+    width: 70%;
+    height: 1500px;
+    margin-left: 30%;
+    padding-left: 40px;
+    background-color: white;
+
+    align-self: center;
+
+    
+
+}
+
+.gridForUsers{
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(3, minmax(3rem, 1fr));
+    background-color: #ffffff;
+    grid-gap: 30px;
+
+}
+
+.gridForResult{
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(2, minmax(3rem, 1fr));
+    background-color: #ffffff;
+    grid-gap: 30px;
+
+}
+
+.userContainer{
+    position: relative;
+    background-color: white;
+    width: 100%;
+    height: 100px;
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.goBackArrow{
+    font-size: 30px;
+}
+.goBackArrow:hover{
+    font-size: 30px;
+    transform: scale(1.25);
+}
+.resultContainer{
+    position: relative;
+    background-color: #f5f7f5;
+    width: 100%;
+    height: 100px;
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    
+}
+
+
+.userImgContainer{
+    position: relative;
+    width: 30%;
+  
+}
+
+.userImgIcon{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 50%;
+
+}
+
+.usernameResult{
+    margin-top: 5px;
+    font-size: 11.5px;
+}
+
+.resultDataContainer{
+    font-size: 11.5px;
+}
+
+.redirectContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.userProfilePicResult{
+    border-radius: 50%;
+}
+.infoIcon{
+    margin-top: 5px;
+    width: 16px;
+    height: 16px;
+}
+
+.redirectIcon{
+    width: 20px;
+    height: 20px;
+    color: #000;
+}
+
+.userDataContainer{
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    
+    
+}
+
+.userDataContainerResult{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    margin-right: 5px;
+
+}
+
+.dropdownList{
+    width: 100%;
+    height: 35px;
+    margin-bottom: 10px;
+
+    
+}
+
+.scanTypeContainer{
+margin-bottom: 15px;
+}
+
+.dropdownListOption{
+    width: 100%;
+    size:50px;
+}
+
+.nOfResults{
+    background-color: #F5B7B1; 
+    min-width:20px ;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.addUserImage{
+    position:relative;
+    height: 100%;
+}
+
+/* The Modal (background) */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 100px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	padding-left: 35%;
+	padding-right: 35%;
+
+  }
+  .myModal{
+	padding-left: 35%;
+	padding-right: 35%;
+  }
+  /* Modal Content */
+  .modal-content {
+	background-color: #fefefe;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 80%;
+  }
+  
+  /* The Close Button */
+  .close {
+	color: #aaaaaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+  }
+
+.ruleTitle{
+    background-color: #D7DBDD;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+a {
+	text-decoration: none !important;
+	color: black !important;;
+}

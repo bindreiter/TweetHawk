@@ -1,0 +1,67 @@
+{% include 'header.html' %}
+
+<link rel="stylesheet" href="/static/css/group.css">
+<script  src="/static/js/header.js"></script>
+    
+<div class="supremeContainer">
+    <div class="groupMainContainer">
+        
+        <div class="groupTitleContainer"><a href="/monitor/groups/" class="goBackArrow">&#129044;</a> <div class="groupTitle"> <p class="groupTitle">{{groupName}}</p></div></div>
+        
+
+
+        <div class="runSettingsContainer">
+            <form  action="/monitor/groups/{{groupID}}/run" method="POST">    
+                <div class="runSettingsContainerForm">
+                    <button class="runButton"><img src="/static/images/pause.png" class="runButtonImage"></button>
+                    <input  type="checkbox" id="enableAutoRun" {{autorunEnabled}} name="autorun" onclick="const Http = new XMLHttpRequest();Http.open('POST', 'auto');Http.send();" > <p class="enableAutoRun" >Enable Autorun</p>
+                    
+                </div>
+            </form>
+        </div>
+
+        <div class="lastScanContainer">
+            Last time scanned: {{lastTimeScanned}}
+        </div>
+
+        <div class="settingsContainer">
+            <a class="groupSettingsContainer" href="/monitor/groups/{{ groupID}}/" ><p class="settingTitle">Results</p></a>
+            <a class="groupSettingsContainer" href="/monitor/groups/{{ groupID}}/users" ><p class="settingTitle">Users</p></a>
+            <a class="groupSettingsContainer" href="/monitor/groups/{{ groupID}}/rules" ><p class="settingTitle">Rules</p></a>
+            <a class="groupSettingsContainer" href="/monitor/groups/{{ groupID}}/settings"><p class="settingTitle">Settings</p></a>
+            
+        </div>
+        <div class="descriptionContainer">
+            <p> {{ groupDescription }} </p>
+        </div>
+        
+        <div class="resultListContainer">
+            <div class="resultTitle">Results</div>
+            <div class="gridForResult">
+                
+                {% for result  in resultList%}
+                <div class="resultContainer">
+                    <div class="userDataContainerResult">
+                        <img class="userProfilePicResult" src="{{result[10]}}" title="your text">
+                        <a href="https://twitter.com/{{result[8]}}" target="_blank" class="usernameResult">{{result[8]}}</a>
+                    </div>
+                    <div class="resultDataContainer">
+                        {{result[5]}}
+                    </div>
+                    <div class="redirectContainer">
+                        <a href="https://twitter.com/redirect/status/{{result[4]}}" target="_blank" >
+                            <img class="redirectIcon" src="/static/images/twitterRedirect.png" title="Open on Twitter &#10;">
+                        </a>
+                        <img class="infoIcon" src="/static/images/infoIcon.png" title="Detected on: 21:45 21/09/2021&#10;Posted on: 21:45 21/09/2021">
+                        <img class="infoIcon" src="/static/images/rules.png" title="Detected because of:&#10;&#10;{%for rule in result[11]%}{{rule[0]}}&#10;{%endfor%} ">
+                    </div>
+                </div>      
+                {%endfor%}       
+                
+            </div>
+    
+        </div>
+
+    </div> 
+   
+</div>
